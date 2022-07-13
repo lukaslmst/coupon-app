@@ -25,6 +25,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ButtonSetComponent } from './button-set/button-set.component';
 import {MatCardModule} from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
+import { BottomAlertComponent } from './bottom-alert/bottom-alert.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { BottomAlertAddedComponent } from './bottom-alert-added/bottom-alert-added.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import { MatDialog } from '@angular/material/dialog';
     MenueDialogComponent,
     AddDialogComponent,
     TemplateAddComponent,
-    ButtonSetComponent  
+    ButtonSetComponent,
+    BottomAlertComponent,
+    BottomAlertAddedComponent  
   ],
   imports: [
     BrowserModule,
@@ -56,7 +61,7 @@ import { MatDialog } from '@angular/material/dialog';
     MatButtonModule
 
   ],
-  providers: [MenueDialogComponent,AddDialogComponent],
+  providers: [MenueDialogComponent,AddDialogComponent,BottomAlertComponent,MatSnackBar],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

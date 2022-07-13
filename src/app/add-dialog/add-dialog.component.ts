@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import {TableComponent} from '../table/table.component';
 
 
 /**

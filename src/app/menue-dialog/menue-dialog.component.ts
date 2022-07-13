@@ -5,6 +5,9 @@ import { MatMenuTrigger } from '@angular/material/menu';
 import { MatDialogRef } from '@angular/material/dialog';
 import { TableComponent } from '../table/table.component';
 import { ButtonSetComponent } from '../button-set/button-set.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import {BottomAlertComponent} from '../bottom-alert/bottom-alert.component';
+
 
 @Component({
   selector: 'app-menue-dialog',
@@ -77,6 +80,7 @@ export class MenueDialogComponentDialog {
 
   closeDialog() {
     this.dialog.closeAll();
+
   }
 
 
@@ -108,11 +112,12 @@ export class MenueDialogComponentDialog {
 })
 
 export class MenueDialogConfirmComponent {
-  constructor(public dialogRef: MatDialogRef<MenueDialogConfirmComponent>) { }
+  constructor(public dialogRef: MatDialogRef<MenueDialogConfirmComponent>, public alert: BottomAlertComponent) { }
 
 
   delete() {
     this.dialogRef.close(true);
+    this.alert.openSnackBar();
   }
 
   cancel() {
@@ -133,7 +138,6 @@ export class MenueDialogAddTemplateComponent {
   delete() {
     console.log("delete");
   }
-
 
 }
 
