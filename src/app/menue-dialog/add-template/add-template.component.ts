@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
-
+import { TemplateTableComponent } from 'src/app/template-table/template-table.component';
 
 /** @title Simple form field */
 @Component({

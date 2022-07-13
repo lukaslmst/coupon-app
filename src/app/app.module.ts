@@ -28,6 +28,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { BottomAlertComponent } from './bottom-alert/bottom-alert.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { BottomAlertAddedComponent } from './bottom-alert-added/bottom-alert-added.component';
+import { TemplateTableComponent } from './template-table/template-table.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { BottomAlertAddedComponent } from './bottom-alert-added/bottom-alert-add
     TemplateAddComponent,
     ButtonSetComponent,
     BottomAlertComponent,
-    BottomAlertAddedComponent  
+    BottomAlertAddedComponent,  
+    
   ],
   imports: [
     BrowserModule,
