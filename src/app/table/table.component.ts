@@ -60,6 +60,9 @@ export class TableComponent implements OnInit {
     this.dialog.addTemplate();
   }
 
+  addCodes() {
+    this.dialog.addCodes();
+  }
 
 }
 

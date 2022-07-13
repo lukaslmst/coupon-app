@@ -2,7 +2,7 @@ import { Dialog } from '@angular/cdk/dialog';
 import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatMenuTrigger } from '@angular/material/menu';
-import { MatDialogRef} from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 import { TableComponent } from '../table/table.component';
 
 
@@ -12,6 +12,7 @@ import { TableComponent } from '../table/table.component';
   styleUrls: ['./menue-dialog.component.css']
 })
 export class MenueDialogComponent implements OnInit {
+
 
   ngOnInit(): void {
   }
@@ -48,14 +49,20 @@ export class MenueDialogComponent implements OnInit {
   }
 
   addTemplate() {
-   // #docregion focus-restoration
-   const dialogRef = this.dialog.open(MenueDialogAddTemplateComponent);  
+    // #docregion focus-restoration
+    const dialogRef = this.dialog.open(MenueDialogAddTemplateComponent);
 
-  // Manually restore focus to the menu trigger since the element that
-  // opens the dialog won't be in the DOM any more when the dialog closes.
+    // Manually restore focus to the menu trigger since the element that
+    // opens the dialog won't be in the DOM any more when the dialog closes.
 
-  dialogRef.afterClosed().subscribe(() => this.menuTrigger?.focus());
-  // #enddocregion focus-restoration
+    dialogRef.afterClosed().subscribe(() => this.menuTrigger?.focus());
+    // #enddocregion focus-restoration
+  }
+
+
+  addCodes() {
+    const dialogRef = this.dialog.open(MenueDialogAddCodesComponent);
+    dialogRef.afterClosed().subscribe(() => this.menuTrigger?.focus());
   }
 
 
@@ -67,7 +74,7 @@ export class MenueDialogComponent implements OnInit {
 })
 export class MenueDialogComponentDialog {
   constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: { available: number, selected: number }) { }
- 
+
   closeDialog() {
     this.dialog.closeAll();
   }
@@ -101,7 +108,7 @@ export class MenueDialogComponentDialog {
 })
 
 export class MenueDialogConfirmComponent {
-  constructor(public dialogRef: MatDialogRef<MenueDialogConfirmComponent>) {}
+  constructor(public dialogRef: MatDialogRef<MenueDialogConfirmComponent>) { }
 
 
   delete() {
@@ -121,11 +128,19 @@ export class MenueDialogConfirmComponent {
 })
 
 export class MenueDialogAddTemplateComponent {
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) { }
 
   delete() {
     console.log("delete");
   }
 
+
+}
+
+@Component({
+  selector: 'form-field-overview-example',
+  templateUrl: './add-codes/add-codes.component.html',
+})
+export class MenueDialogAddCodesComponent {
 
 }
