@@ -44,6 +44,9 @@ export class TableComponent implements OnInit {
 
   }
 
+  textColor = "gray";
+
+
   reservieren() {
     this.dialog.openDialog();
   }
@@ -63,6 +66,10 @@ export class TableComponent implements OnInit {
   addCodes() {
     this.dialog.addCodes();
   }
+
+
+
+
 
 }
 

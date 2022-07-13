@@ -4,7 +4,7 @@ import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { MatDialogRef } from '@angular/material/dialog';
 import { TableComponent } from '../table/table.component';
-
+import { ButtonSetComponent } from '../button-set/button-set.component';
 
 @Component({
   selector: 'app-menue-dialog',

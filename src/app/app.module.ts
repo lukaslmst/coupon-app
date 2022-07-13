@@ -22,6 +22,9 @@ import {MenueDialogComponent } from './menue-dialog/menue-dialog.component';
 import {AddDialogComponent } from './add-dialog/add-dialog.component';
 import { TemplateAddComponent } from './menue-dialog/add-template/add-template.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ButtonSetComponent } from './button-set/button-set.component';
+import {MatCardModule} from '@angular/material/card';
+import { MatDialog } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     TableComponent,
     MenueDialogComponent,
     AddDialogComponent,
-    TemplateAddComponent     
+    TemplateAddComponent,
+    ButtonSetComponent  
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatSlideToggleModule,
     MatDialogModule,    
     FormsModule,
-    ReactiveFormsModule
+    MatButtonModule
+
   ],
   providers: [MenueDialogComponent,AddDialogComponent],
   bootstrap: [AppComponent]
