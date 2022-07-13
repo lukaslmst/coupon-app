@@ -9,7 +9,7 @@ import { MenueDialogComponent } from '../menue-dialog/menue-dialog.component';
 import { Coupons } from '../modules/gutschein';
 import { TableDataSource, TableItem } from './table-datasource';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
-import {AddDialogComponent} from '../add-dialog/add-dialog.component';
+import { AddDialogComponent } from '../add-dialog/add-dialog.component';
 
 
 
@@ -40,16 +40,20 @@ export class TableComponent implements OnInit {
   }
 
   constructor(private readonly dialog: MenueDialogComponent,
-    private readonly addDialog: AddDialogComponent)  {
+    private readonly addDialog: AddDialogComponent) {
 
-      }
+  }
 
   reservieren() {
     this.dialog.openDialog();
   }
 
   addCoupon() {
-    this.addDialog.openDialog();  
+    this.addDialog.openDialog();
+  }
+
+  delete() {
+    this.dialog.delete("0.0s", "0.0s");
   }
 
 
