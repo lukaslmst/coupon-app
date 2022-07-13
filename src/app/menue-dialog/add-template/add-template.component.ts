@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
+/** @title Simple form field */
 @Component({
-  selector: 'app-add-template',
-  templateUrl: './add-template.component.html',
-  styleUrls: ['./add-template.component.css']
+  selector: 'form-field-overview-example',
+  templateUrl: 'add-template.component.html',
 })
-export class AddTemplateComponent implements OnInit {
+export class TemplateAddComponent {}
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
-
-}
+/**  Copyright 2022 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license */

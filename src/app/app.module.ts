@@ -20,7 +20,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MenueDialogComponent } from './menue-dialog/menue-dialog.component';
 import {AddDialogComponent } from './add-dialog/add-dialog.component';
-import { AddTemplateComponent } from './menue-dialog/add-template/add-template.component';
+import { TemplateAddComponent } from './menue-dialog/add-template/add-template.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,8 @@ import { AddTemplateComponent } from './menue-dialog/add-template/add-template.c
     TableComponent,
     MenueDialogComponent,
     AddDialogComponent,
-    AddTemplateComponent,
-   ],
+    TemplateAddComponent     
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -46,7 +47,9 @@ import { AddTemplateComponent } from './menue-dialog/add-template/add-template.c
     MatSortModule,
     MatMenuModule,
     MatSlideToggleModule,
-    MatDialogModule,
+    MatDialogModule,    
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [MenueDialogComponent,AddDialogComponent],
   bootstrap: [AppComponent]
