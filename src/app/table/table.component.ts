@@ -9,6 +9,8 @@ import { MenueDialogComponent } from '../menue-dialog/menue-dialog.component';
 import { Coupons } from '../modules/gutschein';
 import { TableDataSource, TableItem } from './table-datasource';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
+import {AddDialogComponent} from '../add-dialog/add-dialog.component';
+
 
 
 @Component({
@@ -24,25 +26,32 @@ export class TableComponent implements OnInit {
   @ViewChild(MatTable) table!: MatTable<TableItem>;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['name', 'isActive', 'toggle','menue'];
+  displayedColumns = ['name', 'isActive', 'toggle', 'menue'];
   ds!: MatTableDataSource<Coupons>;
   coupons: Coupons[] = [];
 
 
   ngOnInit(): void {
-    this.coupons.push(new Coupons("Netflix",true));
-    this.coupons.push(new Coupons("Spotify",false));
-    this.coupons.push(new Coupons("Amazon",true));
-    this.coupons.push(new Coupons("Apple",false));
+    this.coupons.push(new Coupons("Netflix", true));
+    this.coupons.push(new Coupons("Spotify", false));
+    this.coupons.push(new Coupons("Amazon", true));
+    this.coupons.push(new Coupons("Apple", false));
     this.ds = new MatTableDataSource(this.coupons);
   }
 
-  constructor(private readonly dialog: MenueDialogComponent) {
-  }
+  constructor(private readonly dialog: MenueDialogComponent,
+    private readonly addDialog: AddDialogComponent)  {
+
+      }
 
   reservieren() {
     this.dialog.openDialog();
   }
+
+  addCoupon() {
+    this.addDialog.openDialog();  
+  }
+
 
 }
 

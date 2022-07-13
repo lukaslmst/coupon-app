@@ -2,36 +2,38 @@
     <table mat-table class="full-width-table" matSort aria-label="Elements" [dataSource]=ds>
         <!-- Id Column -->
         <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>name</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
             <td mat-cell *matCellDef="let row">{{row.name}}</td>
         </ng-container>
 
         <!-- Name Column -->
         <ng-container matColumnDef="isActive">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>isActive</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
             <td mat-cell *matCellDef="let row">{{row.isActive}}</td>
         </ng-container>
 
 
         <ng-container matColumnDef="menue">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>menue</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                <button mat-mini-fab color="primary" (click)="addCoupon()">+</button>
+            </th>
             <td mat-cell *matCellDef="let row">
                 <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
+                    <mat-icon>more_vert</mat-icon>
+                </button>
                 <mat-menu #menu="matMenu">
                     <button mat-menu-item (click)="reservieren()">
-                <mat-icon>dialpad</mat-icon>
-                <span>reservieren</span>
-              </button>
+                        <mat-icon>dialpad</mat-icon>
+                        <span>reservieren</span>
+                    </button>
                     <button mat-menu-item disabled>
-                <mat-icon>add_circle</mat-icon>
-                <span>hinzufügen</span>
-              </button>
+                        <mat-icon>add_circle</mat-icon>
+                        <span>hinzufügen</span>
+                    </button>
                     <button mat-menu-item>
-                <mat-icon>delete</mat-icon>
-                <span>löschen</span>
-              </button>
+                        <mat-icon>delete</mat-icon>
+                        <span>löschen</span>
+                    </button>
                 </mat-menu>
             </td>
 
@@ -44,7 +46,6 @@
                 <mat-slide-toggle></mat-slide-toggle>
             </td>
         </ng-container>
-
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

@@ -18,7 +18,8 @@ import { MatSortModule } from '@angular/material/sort';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatDialogModule} from '@angular/material/dialog';
-import { MenueDialogComponent } from './menue-dialog/menue-dialog.component';
+import {MenueDialogComponent } from './menue-dialog/menue-dialog.component';
+import {AddDialogComponent } from './add-dialog/add-dialog.component';
 
 
 @NgModule({
@@ -27,6 +28,8 @@ import { MenueDialogComponent } from './menue-dialog/menue-dialog.component';
     SidenavComponent,
     TableComponent,
     MenueDialogComponent,
+    AddDialogComponent
+
    ],
   imports: [
     BrowserModule,
@@ -45,7 +48,7 @@ import { MenueDialogComponent } from './menue-dialog/menue-dialog.component';
     MatSlideToggleModule,
     MatDialogModule,
   ],
-  providers: [MenueDialogComponent],
+  providers: [MenueDialogComponent,AddDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
