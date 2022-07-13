@@ -20,7 +20,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MenueDialogComponent } from './menue-dialog/menue-dialog.component';
 import {AddDialogComponent } from './add-dialog/add-dialog.component';
-
+import { AddTemplateComponent } from './menue-dialog/add-template/add-template.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +28,8 @@ import {AddDialogComponent } from './add-dialog/add-dialog.component';
     SidenavComponent,
     TableComponent,
     MenueDialogComponent,
-    AddDialogComponent
-
+    AddDialogComponent,
+    AddTemplateComponent,
    ],
   imports: [
     BrowserModule,

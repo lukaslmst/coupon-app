@@ -117,7 +117,7 @@ export class MenueDialogConfirmComponent {
 
 @Component({
   selector: 'menue-dialog-add-template',
-  templateUrl: './add-template/menue-dialog-add-template.html',
+  templateUrl: './add-template/add-template.component.html',
 })
 
 export class MenueDialogAddTemplateComponent {
