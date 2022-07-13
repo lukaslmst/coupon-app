@@ -66,6 +66,8 @@ export class MenueDialogComponentDialog {
     console.log("available: "+this.data.available);
   }
 
+  
+
 }
 
 
