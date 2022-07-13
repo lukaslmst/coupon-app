@@ -56,6 +56,10 @@ export class TableComponent implements OnInit {
     this.dialog.delete("0.0s", "0.0s");
   }
 
+  addTemplate() {
+    this.dialog.addTemplate();
+  }
+
 
 }
 

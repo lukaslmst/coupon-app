@@ -3,6 +3,7 @@ import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { MatDialogRef} from '@angular/material/dialog';
+import { TableComponent } from '../table/table.component';
 
 
 @Component({
@@ -11,8 +12,6 @@ import { MatDialogRef} from '@angular/material/dialog';
   styleUrls: ['./menue-dialog.component.css']
 })
 export class MenueDialogComponent implements OnInit {
-
-
 
   ngOnInit(): void {
   }
@@ -48,12 +47,23 @@ export class MenueDialogComponent implements OnInit {
     });
   }
 
+  addTemplate() {
+   // #docregion focus-restoration
+   const dialogRef = this.dialog.open(MenueDialogAddTemplateComponent);  
+
+  // Manually restore focus to the menu trigger since the element that
+  // opens the dialog won't be in the DOM any more when the dialog closes.
+
+  dialogRef.afterClosed().subscribe(() => this.menuTrigger?.focus());
+  // #enddocregion focus-restoration
+  }
+
 
 }
 
 @Component({
   selector: 'menue-dialog',
-  templateUrl: './menue-dialog.html'
+  templateUrl: './reserve/menue-dialog-reserve.html',
 })
 export class MenueDialogComponentDialog {
   constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: { available: number, selected: number }) { }
@@ -87,8 +97,35 @@ export class MenueDialogComponentDialog {
 
 @Component({
   selector: 'menue-dialog-confirm',
-  templateUrl: './menue-dialog-confirm.html',
+  templateUrl: './confirm/menue-dialog-confirm.html',
 })
+
 export class MenueDialogConfirmComponent {
   constructor(public dialogRef: MatDialogRef<MenueDialogConfirmComponent>) {}
+
+
+  delete() {
+    this.dialogRef.close(true);
+  }
+
+  cancel() {
+    this.dialogRef.close(false);
+  }
+
+
+}
+
+@Component({
+  selector: 'menue-dialog-add-template',
+  templateUrl: './add-template/menue-dialog-add-template.html',
+})
+
+export class MenueDialogAddTemplateComponent {
+  constructor(public dialog: MatDialog) {}
+
+  delete() {
+    console.log("delete");
+  }
+
+
 }

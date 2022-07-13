@@ -23,16 +23,20 @@
                 </button>
                 <mat-menu #menu="matMenu">
                     <button mat-menu-item (click)="reservieren()">
-                        <mat-icon>dialpad</mat-icon>
+                        <mat-icon>book_online</mat-icon>
                         <span>reservieren</span>
                     </button>
-                    <button mat-menu-item disabled>
+                    <button mat-menu-item>
                         <mat-icon>add_circle</mat-icon>
                         <span>hinzufügen</span>
                     </button>
                     <button mat-menu-item (click)="delete()">
                         <mat-icon>delete</mat-icon>
                         <span>löschen</span>
+                    </button>
+                    <button mat-menu-item (click)="addTemplate()">
+                        <mat-icon>request_quote</mat-icon>
+                        <span>Gebührentemplate hinzufügen</span>
                     </button>
                 </mat-menu>
             </td>
