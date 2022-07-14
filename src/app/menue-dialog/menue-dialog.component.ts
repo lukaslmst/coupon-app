@@ -21,12 +21,11 @@ export class MenueDialogComponent implements OnInit {
   }
 
   @ViewChild('menuTrigger') menuTrigger!: MatMenuTrigger;
-
   constructor(private readonly dialog: MatDialog) { }
 
 
+  //opens menue dialog
   openDialog() {
-    // #docregion focus-restoration
     const dialogRef = this.dialog.open(MenueDialogComponentDialog, {
       restoreFocus: false,
       data: {
@@ -35,14 +34,11 @@ export class MenueDialogComponent implements OnInit {
       }
     });
 
-    // Manually restore focus to the menu trigger since the element that
-    // opens the dialog won't be in the DOM any more when the dialog closes.
-
     dialogRef.afterClosed().subscribe(() => this.menuTrigger?.focus());
-    // #enddocregion focus-restoration
   }
 
 
+  //opens delte dialog
   delete(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(MenueDialogConfirmComponent, {
       width: '250px',
@@ -51,26 +47,26 @@ export class MenueDialogComponent implements OnInit {
     });
   }
 
+  //opens dialog to add  new templates
   addTemplate() {
-    // #docregion focus-restoration
     const dialogRef = this.dialog.open(MenueDialogAddTemplateComponent);
-
-    // Manually restore focus to the menu trigger since the element that
-    // opens the dialog won't be in the DOM any more when the dialog closes.
-
     dialogRef.afterClosed().subscribe(() => this.menuTrigger?.focus());
-    // #enddocregion focus-restoration
   }
 
-
+  //opens dialog to add  new codes
   addCodes() {
     const dialogRef = this.dialog.open(MenueDialogAddCodesComponent);
     dialogRef.afterClosed().subscribe(() => this.menuTrigger?.focus());
   }
-
+  
+  //returns the Codes as an string array
+  getCodes():string[] {
+    return ["KHDGS6182", "KHDGS6182", "KHDGS6182"];
+  }
 
 }
 
+//Dialog for Code reservation
 @Component({
   selector: 'menue-dialog',
   templateUrl: './reserve/menue-dialog-reserve.html',
@@ -78,12 +74,12 @@ export class MenueDialogComponent implements OnInit {
 export class MenueDialogComponentDialog {
   constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: { available: number, selected: number }) { }
 
+
   closeDialog() {
     this.dialog.closeAll();
-
   }
 
-
+  
   inc() {
     if (this.data.selected >= 0 && this.data.available > 0) {
       console.log("before available:" + this.data.available);
@@ -100,20 +96,19 @@ export class MenueDialogComponentDialog {
       this.data.selected--;
       console.log("available: " + this.data.available);
     }
-
-
-
   }
 }
+
+
 
 @Component({
   selector: 'menue-dialog-confirm',
   templateUrl: './confirm/menue-dialog-confirm.html',
 })
 
+//delte a Coupon
 export class MenueDialogConfirmComponent {
   constructor(public dialogRef: MatDialogRef<MenueDialogConfirmComponent>, public alert: BottomAlertComponent) { }
-
 
   delete() {
     this.dialogRef.close(true);
@@ -124,9 +119,9 @@ export class MenueDialogConfirmComponent {
     this.dialogRef.close(false);
   }
 
-
 }
 
+//Add new Template
 @Component({
   selector: 'menue-dialog-add-template',
   templateUrl: './add-template/add-template.component.html',
@@ -135,12 +130,10 @@ export class MenueDialogConfirmComponent {
 export class MenueDialogAddTemplateComponent {
   constructor(public dialog: MatDialog) { }
 
-  delete() {
-    console.log("delete");
-  }
-
+  
 }
 
+//Add new Codes
 @Component({
   selector: 'form-field-overview-example',
   templateUrl: './add-codes/add-codes.component.html',
@@ -148,3 +141,4 @@ export class MenueDialogAddTemplateComponent {
 export class MenueDialogAddCodesComponent {
 
 }
+

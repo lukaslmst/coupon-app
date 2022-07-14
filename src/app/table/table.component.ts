@@ -10,6 +10,7 @@ import { Coupons } from '../modules/gutschein';
 import { TableDataSource, TableItem } from './table-datasource';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
 import { AddDialogComponent } from '../add-dialog/add-dialog.component';
+import { ThemePalette } from '@angular/material/core';
 
 
 
@@ -27,8 +28,10 @@ export class TableComponent implements OnInit {
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['name', 'isActive', 'toggle', 'menue'];
-  ds!: MatTableDataSource<Coupons>;
+  ds!: MatTableDataSource<Coupons>; 
   coupons: Coupons[] = [];
+
+  color: ThemePalette = 'primary';
 
 
   ngOnInit(): void {
@@ -44,7 +47,7 @@ export class TableComponent implements OnInit {
 
   }
 
-  textColor = "gray";
+  textColor = "black";
 
 
   reservieren() {
@@ -67,7 +70,11 @@ export class TableComponent implements OnInit {
     this.dialog.addCodes();
   }
 
+  changeColor():any {
 
+    
+  
+  }
 
 
 

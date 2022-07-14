@@ -40,7 +40,7 @@ import { TemplateTableComponent } from './template-table/template-table.componen
     TemplateAddComponent,
     ButtonSetComponent,
     BottomAlertComponent,
-    BottomAlertAddedComponent,  
+    BottomAlertAddedComponent,
     
   ],
   imports: [
@@ -60,10 +60,11 @@ import { TemplateTableComponent } from './template-table/template-table.componen
     MatSlideToggleModule,
     MatDialogModule,    
     FormsModule,
-    MatButtonModule
+    MatCardModule
+     
 
   ],
   providers: [MenueDialogComponent,AddDialogComponent,BottomAlertComponent,MatSnackBar],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
