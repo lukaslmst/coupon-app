@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,29 +18,30 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MenueDialogComponent } from './menue-dialog/menue-dialog.component';
-import {AddDialogComponent } from './add-dialog/add-dialog.component';
-import { TemplateAddComponent } from './menue-dialog/add-template/add-template.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { ButtonSetComponent } from './button-set/button-set.component';
 import {MatCardModule} from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
 import { BottomAlertComponent } from './bottom-alert/bottom-alert.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { BottomAlertAddedComponent } from './bottom-alert-added/bottom-alert-added.component';
-import { TemplateTableComponent } from './template-table/template-table.component';
+import { AddCodesComponent } from './add-codes/add-codes.component';
+import { ReserveCodesComponent } from './reserve-codes/reserve-codes.component';
+import { ConfirmComponent } from './delete-confirm/delete-confirm.component';
+import { AddCouponComponent } from './add-coupon/add-coupon.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    TableComponent,
     MenueDialogComponent,
-    AddDialogComponent,
-    TemplateAddComponent,
-    ButtonSetComponent,
     BottomAlertComponent,
-    BottomAlertAddedComponent,
-    
+    AddCodesComponent,
+    ReserveCodesComponent,
+    ConfirmComponent,
+    TableComponent
+
   ],
   imports: [
     BrowserModule,
@@ -64,7 +64,7 @@ import { TemplateTableComponent } from './template-table/template-table.componen
      
 
   ],
-  providers: [MenueDialogComponent,AddDialogComponent,BottomAlertComponent,MatSnackBar],
+  providers: [MenueDialogComponent,BottomAlertComponent,MatSnackBar,AddCodesComponent,AddCouponComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

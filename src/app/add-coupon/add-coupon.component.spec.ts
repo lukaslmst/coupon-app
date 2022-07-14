@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ButtonSetComponent } from './button-set.component';
+import { AddCouponComponent } from './add-coupon.component';
 
-describe('ButtonSetComponent', () => {
-  let component: ButtonSetComponent;
-  let fixture: ComponentFixture<ButtonSetComponent>;
+describe('AddCouponComponent', () => {
+  let component: AddCouponComponent;
+  let fixture: ComponentFixture<AddCouponComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ButtonSetComponent ]
+      declarations: [ AddCouponComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ButtonSetComponent);
+    fixture = TestBed.createComponent(AddCouponComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -9,9 +9,8 @@ import { MenueDialogComponent } from '../menue-dialog/menue-dialog.component';
 import { Coupons } from '../modules/gutschein';
 import { TableDataSource, TableItem } from './table-datasource';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
-import { AddDialogComponent } from '../add-dialog/add-dialog.component';
 import { ThemePalette } from '@angular/material/core';
-
+import { AddCouponComponent } from '../add-coupon/add-coupon.component';
 
 
 @Component({
@@ -43,7 +42,7 @@ export class TableComponent implements OnInit {
   }
 
   constructor(private readonly dialog: MenueDialogComponent,
-    private readonly addDialog: AddDialogComponent) {
+    private readonly addDialog: AddCouponComponent) {
 
   }
 
@@ -55,7 +54,7 @@ export class TableComponent implements OnInit {
   }
 
   addCoupon() {
-    this.addDialog.openDialog();
+    this.dialog.addCoupon();
   }
 
   delete() {
