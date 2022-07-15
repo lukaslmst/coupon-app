@@ -1,9 +1,9 @@
-.window{
+.window-delete{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 30vw;
+    width: 50vw;
     height: 40vh;
 }
 

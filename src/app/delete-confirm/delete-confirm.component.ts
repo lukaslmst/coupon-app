@@ -14,7 +14,8 @@ export class ConfirmComponent {
 
   delete() {
     this.dialogRef.close(true);
-    this.alert.openSnackBar();
+    this.alert.openSnackBar("Gutscheinart erfolgreich gelöscht!");
+
   }
 
   cancel() {

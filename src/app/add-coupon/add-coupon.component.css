@@ -1,24 +1,27 @@
-.window-code{
+.add-template-window{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 30vw;
-    height: 40vh;
-
+    width: 40vw;
+    height: 25vh;
 }
 
-textarea{
-    resize: none;
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
+.example-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.example-form .example-full-width {
     width: 80%;
-    height: 60%;
-    margin: 5%;
 }
 
-h1{
-    font-weight: 600;
+.example-form .example-full-width textarea{
+    height: 80%;
 }
 
 .btn-codes{
@@ -28,4 +31,10 @@ h1{
 }
 .btn-codes button{
 margin: 2.5%;
+}
+
+h1{
+    
+    font-weight: bold;
+ 
 }

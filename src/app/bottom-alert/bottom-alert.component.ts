@@ -9,30 +9,19 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   templateUrl: 'bottom-alert.component.html'
 })
 export class BottomAlertComponent {
+
   durationInSeconds = 3.5;
 
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor(private _snackBar: MatSnackBar) {
+  }
 
-  openSnackBar() {
-    this._snackBar.openFromComponent(BottomAlertComponentAlert, {
-      duration: this.durationInSeconds * 1000,
-    });
+  openSnackBar(message: string) {
+    this._snackBar.open(message);
   }
 }
 
-@Component({
-  selector: 'app-bottom-alert',
-  templateUrl: 'bottom-alert.component.html',
-  styles: [
-    `   
-    .delete-alert {
-      color: lightgreen;
-      font-weight: regular;
-    } 
-  `,
-  ],
-})
-export class BottomAlertComponentAlert{}
+
+
 
 
 /**  Copyright 2022 Google LLC. All Rights Reserved.

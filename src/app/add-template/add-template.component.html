@@ -1,8 +1,35 @@
-<div mat-form-field appearance="fill">
-    <div mat-label></div>
-    <input matInput placeholder="Vorlage" />
-</div>
-<div mat-form-field appearance="fill">
-    <div mat-label></div>
-    <input matInput placeholder="Preisgruppe" />
+<div class="add-template-window">
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <mat-text-column name="vorlage"></mat-text-column>
+        <mat-text-column name="preisgruppe"></mat-text-column>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <div class="form">
+
+        <div class="left-form">
+           <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Vorlage</mat-label>
+            <input matInput >
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Preisgruppe</mat-label>
+            <input matInput >
+        </mat-form-field>   
+        </div>
+      
+
+        <div class="btn-codes">
+            <button mat-raised-button color="basic" (click) ="closeDialog()">abbrechen</button>
+            <button mat-raised-button color="primary" (click) ="add()">hinzufügen</button>
+        </div>
+
+
+
+    </div>
 </div>

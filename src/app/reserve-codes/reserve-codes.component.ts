@@ -1,5 +1,6 @@
 import { Component, Inject } from "@angular/core";
 import { MatDialog, MAT_DIALOG_DATA } from "@angular/material/dialog";
+import {ReservedCodesComponent} from "../reserved-codes/reserved-codes.component";
 
 @Component({
   selector: 'menue-dialog',
@@ -32,4 +33,18 @@ export class ReserveCodesComponent {
       console.log("available: " + this.data.available);
     }
   }
+
+
+  reserve() {
+
+    this.dialog.open(ReservedCodesComponent);
+
+  }
+
+  cancel() {
+
+    alert("Reservierung abgebrochen!");
+
+  }
+
 }

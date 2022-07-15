@@ -1,21 +1,19 @@
 .window-code{
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 30vw;
-    height: 40vh;
+    height: 30vh;
 
 }
 
 textarea{
-    resize: none;
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     width: 80%;
-    height: 60%;
     margin: 5%;
 }
+
 
 h1{
     font-weight: 600;
@@ -28,4 +26,8 @@ h1{
 }
 .btn-codes button{
 margin: 2.5%;
+}
+
+mat-form-field{
+width: 80%;
 }

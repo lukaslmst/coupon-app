@@ -1,0 +1,53 @@
+
+.add-template-window{
+
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 65vh;
+    align-items: center;
+    justify-content: center;
+}
+table {
+    width: 80%;
+    height: 100%;
+    margin: 2%;
+}
+
+
+.btn-codes button{
+margin: 2.5%;
+}
+
+.form{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+}
+
+.left-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+
+.left-form mat-form-field {
+
+    margin: 2.5%;
+
+}
+
+
+.btn-codes{
+    height: 100%;
+
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

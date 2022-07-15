@@ -1,9 +1,17 @@
 <div class="window-code">
 
-        <h1> Codes hinzufügen </h1>
-        <textarea matInput placeholder="Liste der Codes eingeben"></textarea>
+    <h1> Codes hinzufügen </h1>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Liste der Codes einfügen</mat-label>
+        <textarea matInput cdkTextareaAutosize
+        cdkAutosizeMinRows="4"
+       ></textarea>
+    </mat-form-field>
+
     <div class="btn-codes">
-        <button mat-raised-button color="basic">abbrechen</button>
-        <button mat-raised-button color="primary">hinzufügen</button>
+        <button mat-raised-button color="basic" (click)="closeDialog()">abbrechen</button>
+        <button mat-raised-button color="primary" (click)="add()">hinzufügen</button>
     </div>
+
 </div>

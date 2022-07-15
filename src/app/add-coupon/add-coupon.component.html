@@ -1,19 +1,18 @@
-<div class="window-code">
-
-    <h1>Gutscheinart hinzufügen</h1>
-
-    <form class="example-form">
-        <mat-form-field class="example-full-width" appearance="fill">
+<div class="add-template-window">
+<h1>Gutscheinart hinzufügen</h1>
+  <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Gutscheinname</mat-label>
-          <input matInput #message maxlength="256" placeholder="Gutscheinname">
-          <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
-        </mat-form-field>
-      </form>
+          <input matInput placeholder="Apple, Netflix..." >
+      </mat-form-field>
 
-    <textarea matInput placeholder="Beschreibung"></textarea>
-
-   <div class="btn-codes">
-    <button mat-raised-button color="basic">abbrechen</button>
-    <button mat-raised-button color="primary">hinzufügen</button>
-</div>
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Beschreibung</mat-label>
+          <textarea matInput></textarea>
+      </mat-form-field>
+  </form>
+  <div class="btn-codes">
+      <button mat-raised-button color="basic" (click) ="closeDialog()" >abbrechen</button>
+      <button mat-raised-button color="primary" (click) ="add()">hinzufügen</button>
+  </div>
 </div>
