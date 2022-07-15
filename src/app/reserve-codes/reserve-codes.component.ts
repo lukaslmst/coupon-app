@@ -4,6 +4,7 @@ import { MatDialog, MAT_DIALOG_DATA } from "@angular/material/dialog";
 @Component({
   selector: 'menue-dialog',
   templateUrl: './reserve-codes.component.html',
+  styleUrls: ['./reserve-codes.component.css']
 })
 export class ReserveCodesComponent {
   constructor(public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: { available: number, selected: number }) { }

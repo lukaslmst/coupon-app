@@ -9,7 +9,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   templateUrl: 'bottom-alert.component.html'
 })
 export class BottomAlertComponent {
-  durationInSeconds = 5;
+  durationInSeconds = 3.5;
 
   constructor(private _snackBar: MatSnackBar) {}
 
@@ -26,8 +26,8 @@ export class BottomAlertComponent {
   styles: [
     `   
     .delete-alert {
-      color: green;
-      font-weight: bold;
+      color: lightgreen;
+      font-weight: regular;
     } 
   `,
   ],

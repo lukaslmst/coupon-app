@@ -27,9 +27,8 @@ import { AddCodesComponent } from './add-codes/add-codes.component';
 import { ReserveCodesComponent } from './reserve-codes/reserve-codes.component';
 import { ConfirmComponent } from './delete-confirm/delete-confirm.component';
 import { AddCouponComponent } from './add-coupon/add-coupon.component';
-
-
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatHint } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -40,7 +39,8 @@ import { AddCouponComponent } from './add-coupon/add-coupon.component';
     AddCodesComponent,
     ReserveCodesComponent,
     ConfirmComponent,
-    TableComponent
+    TableComponent,
+    AddCouponComponent,
 
   ],
   imports: [
@@ -60,9 +60,9 @@ import { AddCouponComponent } from './add-coupon/add-coupon.component';
     MatSlideToggleModule,
     MatDialogModule,    
     FormsModule,
-    MatCardModule
-     
-
+    MatCardModule,
+    ReactiveFormsModule,  
+    MatFormFieldModule,    
   ],
   providers: [MenueDialogComponent,BottomAlertComponent,MatSnackBar,AddCodesComponent,AddCouponComponent],
   bootstrap: [AppComponent],

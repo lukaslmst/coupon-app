@@ -1,0 +1,17 @@
+.window{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30vw;
+    height: 40vh;
+}
+
+.btn-codes{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+.btn-codes button{
+margin: 2.5%;
+}

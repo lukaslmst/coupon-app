@@ -1,9 +1,11 @@
-<h1 mat-dialog-title>Sind sie sicher, dass die Gutscheinart löschen möchten?</h1>
-<div mat-dialog-content>
-    Wenn sie die Gutscheinart löschen gehen alle Informationen darüber verloren.
-</div>
-<div mat-dialog-actions>
-    <button mat-raised-button mat-dialog-close (click)="cancel()">abbrechen</button>
-    <button mat-raised-button color="warn" (click)="delete()">löschen</button>
-</div>
+<div class="window">
+    <h1 >Sind sie sicher, dass die Gutscheinart löschen möchten?</h1>
+    <div class="main-content">
+        Wenn sie die Gutscheinart löschen gehen alle Informationen darüber verloren.
+    </div>
 
+    <div class="btn-codes">
+        <button mat-raised-button mat-dialog-close (click)="cancel()">abbrechen</button>
+        <button mat-raised-button color="warn" (click)="delete()">löschen</button>
+    </div>
+</div>

@@ -1,5 +1,19 @@
-<h1 mat-dialog-title>Gutscheinart hinzufügen</h1>
-<div mat-dialog-content>Funktion zum hinzufügen von Gutscheinarten.</div>
-<div mat-dialog-actions>
-<button mat-button mat-dialog-close (click)="closeDialog()">Close</button>
+<div class="window-code">
+
+    <h1>Gutscheinart hinzufügen</h1>
+
+    <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Gutscheinname</mat-label>
+          <input matInput #message maxlength="256" placeholder="Gutscheinname">
+          <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+        </mat-form-field>
+      </form>
+
+    <textarea matInput placeholder="Beschreibung"></textarea>
+
+   <div class="btn-codes">
+    <button mat-raised-button color="basic">abbrechen</button>
+    <button mat-raised-button color="primary">hinzufügen</button>
+</div>
 </div>

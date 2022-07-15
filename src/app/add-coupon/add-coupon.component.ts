@@ -1,23 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
-
 @Component({
-  selector: 'app-add-dialog',
+  selector: 'app-add-coupon',
   templateUrl: './add-coupon.component.html',
+  styleUrls: ['./add-coupon.component.css']
 })
-export class AddCouponComponent {
- 
+export class AddCouponComponent implements OnInit {
+
   constructor(public dialog: MatDialog) {}
+
+  ngOnInit(): void {
+  }
+  
 
   closeDialog() {
     this.dialog.closeAll();
   }
 
+
 }
-
-
-/**  Copyright 2022 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-
-    can be found in the LICENSE file at https://angular.io/license */

@@ -1,7 +1,23 @@
-<div mat-dialog-content>
-    <button mat-mini-fab (click)="inc()">+</button>
-    <button mat-mini-fab (click)="dec()">-</button> {{data.selected}}
+<div class="window">
+    <div class="main-content">
 
-</div>
-<div mat-dialog-actions>
+        <div class="main-content-left">
+            <p>Verfügbar: <span>{{data.available}}</span></p> 
+        </div>
+        <div class="main-content-right">
+            <p>Anzahl: <span>{{data.selected}}</span></p> 
+            <div class="btns">
+                <button mat-mini-fab color="primary" (click)="inc()">+</button>
+                <button mat-mini-fab color="basic" (click)="dec()">-</button> 
+            </div>
+        
+        </div>
+
+        
+    </div>
+
+    <div class="btn-reserve-codes">
+        <button mat-raised-button color="basic">abbrechen</button>
+        <button mat-raised-button color="primary">bestätigen</button>
+    </div>
 </div>

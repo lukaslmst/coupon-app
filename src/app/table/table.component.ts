@@ -41,8 +41,7 @@ export class TableComponent implements OnInit {
     this.ds = new MatTableDataSource(this.coupons);
   }
 
-  constructor(private readonly dialog: MenueDialogComponent,
-    private readonly addDialog: AddCouponComponent) {
+  constructor(private readonly dialog: MenueDialogComponent) {
 
   }
 

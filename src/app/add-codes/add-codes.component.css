@@ -1,0 +1,31 @@
+.window-code{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30vw;
+    height: 40vh;
+
+}
+
+textarea{
+    resize: none;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    height: 60%;
+    margin: 5%;
+}
+
+h1{
+    font-weight: 600;
+}
+
+.btn-codes{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+.btn-codes button{
+margin: 2.5%;
+}
