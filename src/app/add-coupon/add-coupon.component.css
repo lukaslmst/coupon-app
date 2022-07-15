@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     width: 40vw;
-    height: 25vh;
+    height: 30vh;
 }
 
 .example-form{
@@ -34,7 +34,7 @@ margin: 2.5%;
 }
 
 h1{
-    
+
     font-weight: bold;
  
 }
